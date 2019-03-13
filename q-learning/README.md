@@ -37,7 +37,7 @@ English:
 
 # Q-Learning
 
-French:
+English:
 
 ### Epsilon Greedy Exploration and Exploitation
 
