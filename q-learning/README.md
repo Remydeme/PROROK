@@ -8,7 +8,7 @@ Nous souhaitons faire se déplacer une voiture dans un environnement qui lui est
 
 ### Epsilon Greedy 
 
-Lors de l'apprentissage supervisé, notre voiture avance en respectant une police (pi). Cette police consiste à choisir le meilleur état futur s' sachant que l'on est dans l'état S. En suivant cette logique de déplacement nous devons normalement atteindre notre objectif et obtenir une récompense, la plus proche. Mais admettons qu'il y avait une récompense plus éloigné et plus importante notre intelligence artificielle en suivant uniquement cette logique ne l'atteindra jamais.
+Lors de l'apprentissage supervisé, notre voiture avance en respectant une police (pi). Cette police consiste à choisir l'action qui maximise l'espérance pour un état futur S' sachant que l'on est dans l'état S. En suivant cette logique de déplacement nous devons normalement atteindre notre objectif et obtenir une récompense, la plus proche. Mais admettons qu'il y avait une récompense plus éloigné et plus importante notre intelligence artificielle en suivant uniquement cette logique ne l'atteindra jamais.
 
 L'epsilon greedy est un paramètre qui varie entre 0 et 1. Sa valeur détermine le pourcentage d'exploration que l'on souhaite effectuer. 0.3 impliquent 30 % d'exploration et 70 % d'exploitation. Ce paramètre d'exploration va permettre à notre agent de découvrir de nouveaux états car il effectuera 30 % de ces mouvements aléatoirement. 
 
