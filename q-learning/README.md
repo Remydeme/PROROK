@@ -32,6 +32,13 @@ s : state
 a : action 
 l : learning rate
 
+### Implemntation
+
+
+Le programme est implmenter en python. Pour obtenir un agent capabe de se déplacer sur notre map il nosu faut construire notre Q-Table est la remplir des valeur Q(s, a). Nous avons implementer deux classe :
+
+- Agent : qui représente la voiture.
+- Map : qui correpond au terrain sur lequel la voiture se déplace.
 
 English: 
 
