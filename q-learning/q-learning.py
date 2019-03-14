@@ -3,7 +3,7 @@ from agent import  Agent
 
 
 if __name__ == "__main__":
-    mapo = Map(2, 2)
+    mapo = Map(5, 5)
     mapo.initGrid(epsilon=0.1)
     mapo.draw()
 

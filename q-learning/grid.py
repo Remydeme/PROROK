@@ -47,12 +47,19 @@ class Map():
     def size(self):
         return self.width * self.height
 
-    def initGrid(self, epsilon=0.1):
+    def initGrid(self, epsilon=0.1, eta=0.1):
         """ This function init the grid. It's set the las case to 1 and a certain number of case to -1
             obstacle is the parameter that permits you to set the perentage of obstacles. 0.1 => 10%
         """
         self.grid[-1][-1] = 1
         size = self.width * self.height
+        for i in range(0, size):
+            randf = random.random()
+            if randf < eta:
+                x_temp = random.randint(0, self.height - 2)
+                y_temp = random.randint(0, self.width - 2)
+                self.__grid[x_temp][y_temp] = 1
+
         for i in range(0, size):
             randf = random.random()
             if randf < epsilon:
@@ -128,9 +135,7 @@ class Map():
         newState = (self.location_[0] * self.width ) + self.location_[1]
 
         if self.location_[0] == 0 and self.location_[0] == 0:
-            print("newState " + str(newState) + " location " + str(self.location_), flush=True)
             return 0
 
-        print("newState " + str(newState) + " location " + str(self.location_), flush=True)
         return newState
 

@@ -38,30 +38,30 @@ class Agent():
     @gamma.setter
     def gamma(self, value):
         if value > 1:
-            gamma = 1
+            gamma_ = 1
         elif value <= 0:
-            gamma = 0.01
+            gamma_ = 0.01
         else:
-            gamma = value
+            gamma_ = value
 
     @epsilon.setter
-    def epsilon(self, value):
+    def eps(self, value):
         if value > 1:
-            epsilon = 1
+            self.epsilon_ = 1
         elif value < 0:
-            epsilon = 0
+            self.epsilon_ = 0
         else:
-            self.epsilon = value
+            self.epsilon_ = value
 
     @l.setter
-    def l(self, value):
+    def lerning_rate(self, value):
 
         if value > 1:
-            self.l = 1
+            self.l_ = 1
         elif value < 0:
-            self.l = 0.01
+            self.l_ = 0.01
         else:
-            self.l = value
+            self.l_ = value
 
     def displayQTable(self):
         size = self.grid.size()
@@ -81,7 +81,7 @@ class Agent():
         while self.hasFinished() != True:
             self.takeAction()
         self.resetPlayer()
-        self.epsilon_ -= 0.01
+        self.epsilon_ -= 0.001
 
     def pickBestAction(self):
         """ This function will return the next best action that will lead to the state S' and the esperance value of
@@ -118,11 +118,9 @@ class Agent():
         if self.epsilon_ > randf:
             action = random.randint(0, 3)
             futureState = self.nextState(action)
-            print("action value 1: " + str(action), flush=True)
         else:
             action = self.pickBestAction()
             futureState = self.nextState(action=action)
-            print("action value 2: " + str(action), flush=True)
 
         #check future state
         if futureState == None:
@@ -143,11 +141,10 @@ class Agent():
         # now we compute the value Q(S, A)new
         # Q(S, A)new = Q(S, A)old + l * [ reward + gamma * (Q(S', A') - Q(S, A)old)]
         qValue = self.__stateQValue + self.l_ * (reward + self.gamma_ * futureStateQValue - self.__stateQValue)
-
+        print(qValue)
         # We set the current Qvalue to the new Qvalue compute knowing that we have move to this new state S
         # doing the action a
         self.__stateQValue = qValue
-        print("New QValue " + str(qValue))
 
 
         self.updateStateValue(state=self.__state, value=qValue, action=int(action))
