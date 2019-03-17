@@ -81,7 +81,7 @@ class Agent():
         while self.hasFinished() != True:
             self.takeAction()
         self.resetPlayer()
-        self.epsilon_ -= 0.001
+        self.eps = self.eps - 0.01
 
     def pickBestAction(self):
         """ This function will return the next best action that will lead to the state S' and the esperance value of
@@ -138,9 +138,14 @@ class Agent():
 
         futureStateQValue = self.__qTable[futureState][futureAction]
 
+        #Compute the Qtarget = R + y * Q(S',A')
+        if reward == 1: # we have reached the end
+            qTarget = 1
+        else:
+            qTarget = reward + self.gamma_ * futureStateQValue
         # now we compute the value Q(S, A)new
         # Q(S, A)new = Q(S, A)old + l * [ reward + gamma * (Q(S', A') - Q(S, A)old)]
-        qValue = self.__stateQValue + self.l_ * (reward + self.gamma_ * futureStateQValue - self.__stateQValue)
+        qValue = self.__stateQValue + self.l_ * (qTarget - self.__stateQValue)
         print(qValue)
         # We set the current Qvalue to the new Qvalue compute knowing that we have move to this new state S
         # doing the action a
