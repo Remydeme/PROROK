@@ -54,18 +54,19 @@ def playRandomly():
 
 class DeepQAgent():
 
-    episode = 1000
+    episode = 15000
 
     def __init__(self, state_size, action_size):
         self.state_size = state_size
         self.action_size = action_size
-        self.epsilon = 0.3
+        self.epsilon = 0.5
         self.lr = 1e-3
         self.gamma = 0.9
         self.epsilon_min = 0.01
         self.epsilon_decay = 0.995
         self.model = self.build_model()
         self.memory = deque(maxlen=2000)
+        self.mean_score = 0
 
 
     def reset(self):
@@ -79,13 +80,15 @@ class DeepQAgent():
 
         model = Sequential()
 
-        model.add(Dense(40, input_dim=self.state_size,kernel_initializer='uniform',  activation='relu'))
+        model.add(Dense(50, input_dim=self.state_size,kernel_initializer='uniform',  activation='relu'))
 
-        model.add(Dense(40, kernel_initializer='uniform', activation='relu'))
+        model.add(Dense(75, kernel_initializer='uniform', activation='relu'))
 
-        model.add(Dense(40, kernel_initializer='uniform', activation='relu'))
+        model.add(Dense(100, kernel_initializer='uniform', activation='relu'))
 
-        model.add(Dense(40, kernel_initializer='uniform', activation='linear'))
+        model.add(Dense(75, kernel_initializer='uniform', activation='relu'))
+
+        model.add(Dense(50, kernel_initializer='uniform', activation='linear'))
 
         model.compile(loss='mse',optimizer=Adam(lr=self.lr))
 
@@ -156,9 +159,11 @@ def trainAgent():
                 # print the score and break out of the loop
                 print("episode: {}/{}, score: {}"
                       .format(e, agent.episode, time_t))
+                agent.mean_score += time_t
                 break
         # train the agent with the experience of the episode
-        agent.replay(32)
+        agent.replay(10)
+    print("Mean score : {}".format(agent.mean_score / agent.episode) )
     return agent
 
 if __name__ == "__main__":
