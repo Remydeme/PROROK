@@ -1,3 +1,15 @@
+# Gradient Descent 
+
+La descente de gradient permet d'ajuster les poids en fonction de l'erreur calculer en sortie du réseau de neuronne. 
+
+### Comment mettre à jour les poids
+
+Pour mettre à jour les poids il faut déterminer dans quel sens la variation de ces poids font varier notre érreur ? 
+
+w <- w - learning_rate * (df/dw)  
+
+df/dw doit être calculé pour chaque poids dans chaque couche avec la chain rule.
+
 # Explosion et disparition du gradient
 
 Dans cet implémentation d'un réseau de neuronne nous avons traité le problème de l'explosion et de disparition du gradient.
