@@ -54,6 +54,9 @@ La fonction d'activation sigmoide était utilisé car elle a un comportement pro
 
 Malheureusement, la fonction Relu cause un problème surnomé *"dying relu". En effet, la fonction relu retourne une valeur null lorque la valeur Z qui lui est fourni (Z = W*X + b) est négative. Cela entraine la mort de neuronne durant la phase d'entrainement. Ces neuronnes ont pour valeur de sortie 0. Il est peu probable que ce neurone reprenne vie car le gradient vaut toujours 0 lorque la sortie du neuronne est 0.
 
+# !! mettre l'image de loperation du gradient pour montrer pourquoi ça fait zero.
+
+
 Il est possible d'utiliser une variante appelé, leaky Relu qui au lieu de retourné 0 pour des valeur négative retourne 
 (alpha * z). Alpha correspond à la pente de Z. La fuite sera d'autant plus importante que alpha sera grand. D'après les recherche le réseau de neuronne est très performant avec un alpha égal à 0,2.
 
