@@ -66,6 +66,8 @@ La fonction Leaky Elu :
 - leakyElu(z) = alpha * (exp(z) -1) si z < 0
 - z                             si z >= 0
 
+z étant ègale à : wx + b 
+
 Elle donne de très bon résultat, meilleur que ceux de leakyRelu cependant la dérivé est plus longue a caculer. 
 
 ### Normalisation par mini-lots
