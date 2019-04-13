@@ -18,8 +18,8 @@ d'activation logistique et  d'initialiser les poids des couches avec des valeurs
 
 
 L'utilisation de cette méthode entraine l'augmentation de la variance à la sortie de chaque noeud des neuronnes. Cette 
-variance augmente couche après couche jusqu'à atteindre saturation. La fonction logistique étant une fonction qui pour une
-grande valeur positive ou négative sature à 1 (positif) ou 0 (négatif) avec une valeur de dérivé proche de zéro on observe une disparition du gradient lors de la rétropropagation. 
+variance augmente couche après couche jusqu'à saturation de la fonction d'activation. La fonction logistique étant une fonction qui pour une
+grande valeur positive ou négative sature à 1 (positif) ou 0 (négatif) avec une valeur de dérivé proche de zéro pour ces valeurs. On observe de ce fait une disparition du gradient lors de la rétropropagation. 
 
 \frac{\mathrm{d}y}{\mathrm{d}x} = \frac{\lambda e^{-\lambda x}}{(1 + e^{-\lambda x})^2}
 # put image of the sigmoid derivate
