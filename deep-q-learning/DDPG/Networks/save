@@ -1,0 +1,18 @@
+
+ def get_action(self, state):
+        actions = self.policyNet(state)
+        #tf.multiply(0.5, tf.multiply(actions, (self.action_high - self.action_low)) + (
+                    #self.action_high + self.action_low))
+        actions = actions
+        return actions[0]
+
+    def evaluate_state(self, state):
+        actions = self.policyNet(state)
+        return actions
+
+
+    def get_target_action(self, state):
+        actions = self.policyTargetNet(state)
+        #actions = actions + np.random.normal(loc=0.0, scale=0.1, size=None)
+        #actions = tf.clip_by_value(actions, self.action_low, self.action_high)
+        return actions

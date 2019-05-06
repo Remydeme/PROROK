@@ -2,8 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4b4001e-4ba8-4807-a599-c1550d04a12d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tensorflow/nn_set_hyperparameter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UDPClient/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UDPClient/client.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deep-q-learning/DDPG/BufferReplay.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deep-q-learning/DDPG/DDPGAgent.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deep-q-learning/DDPG/Networks/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deep-q-learning/DDPG/Networks/critics.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deep-q-learning/DDPG/Networks/policy.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deep-q-learning/DDPG/Networks/save" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deep-q-learning/DDPG/UNoise.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deep-q-learning/DDPG/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deep-q-learning/DDPG/normalizedAction.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deep-q-learning/Deep-Deterministic-Policy-Gradient/Networks/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deep-q-learning/Deep-Deterministic-Policy-Gradient/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deep-q-learning/PolicyGradient/Ant-v1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deep-q-learning/PolicyGradient/policyGradient.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deep-q-learning/SoftPolicyGradient/Sac/BufferReplay.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deep-q-learning/SoftPolicyGradient/Sac/Networks/DQN.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deep-q-learning/SoftPolicyGradient/Sac/Networks/PolicyNetwork.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deep-q-learning/SoftPolicyGradient/Sac/Networks/SACAgent.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deep-q-learning/SoftPolicyGradient/Sac/Networks/ValueNetwork.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deep-q-learning/SoftPolicyGradient/Sac/Networks/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deep-q-learning/SoftPolicyGradient/Sac/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deep-q-learning/SoftPolicyGradient/SoftActorCritic.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deep-q-learning/SoftPolicyGradient/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tensorflow/trainning of neural net/progressGradient.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tensorflow/tutorial/tutorial_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/PROROK.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PROROK.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deep-q-learning/cart-pole.py" beforeDir="false" afterPath="$PROJECT_DIR$/deep-q-learning/PolicyGradient/cart-pole.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensorflow/trainning of neural net/nn_set_hyperparameter.py" beforeDir="false" afterPath="$PROJECT_DIR$/tensorflow/trainning of neural net/nn_set_hyperparameter.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,71 +44,91 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/q-learning/grid.py">
+        <entry file="file://$PROJECT_DIR$/deep-q-learning/DDPG/normalizedAction.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1740">
-              <caret line="117" column="62" selection-start-line="117" selection-start-column="62" selection-end-line="117" selection-end-column="62" />
+            <state relative-caret-position="15">
+              <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
               <folding>
-                <element signature="e#0#13#0" expanded="true" />
-                <marker date="1552520615397" expanded="true" signature="918:951" ph="..." />
-                <marker date="1552520615397" expanded="true" signature="1125:1171" ph="..." />
+                <element signature="e#0#10#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/q-learning/q-learning-notes.ipynb">
-          <provider selected="true" editor-type-id="ipnb-editor">
-            <state>
-              <selected id="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/deep-q-learning/cart-pole.py">
+        <entry file="file://$PROJECT_DIR$/deep-q-learning/DDPG/UNoise.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1125">
-              <caret line="87" selection-start-line="87" selection-end-line="87" />
+            <state relative-caret-position="90">
+              <caret line="6" column="104" selection-start-line="6" selection-start-column="104" selection-end-line="6" selection-end-column="104" />
               <folding>
-                <element signature="e#318#328#0" expanded="true" />
+                <element signature="e#0#18#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tensorflow/first_session.py">
+        <entry file="file://$PROJECT_DIR$/deep-q-learning/SoftPolicyGradient/Sac/Networks/PolicyNetwork.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="509">
+              <caret line="36" column="65" selection-start-line="36" selection-start-column="65" selection-end-line="36" selection-end-column="65" />
               <folding>
-                <marker date="1552845896958" expanded="true" signature="41:46" ph="..." />
-                <marker date="1552845896958" expanded="true" signature="251:363" ph="..." />
+                <element signature="e#1#24#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tensorflow/gradientDescent.py">
+        <entry file="file://$PROJECT_DIR$/deep-q-learning/DDPG/BufferReplay.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="72" column="133" selection-start-line="72" selection-start-column="133" selection-end-line="72" selection-end-column="133" />
+            <state relative-caret-position="97">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/deep-q-learning/SoftPolicyGradient/Sac/Networks/SACAgent.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="736">
+              <caret line="167" column="23" selection-start-line="167" selection-start-column="23" selection-end-line="167" selection-end-column="23" />
               <folding>
-                <element signature="e#0#53#0" expanded="true" />
-                <marker date="1553074852560" expanded="true" signature="157:647" ph="..." />
+                <element signature="e#2#53#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tensorflow/nn_set_hyperparameter.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/deep-q-learning/SoftPolicyGradient/Sac/Networks/DQN.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="103" selection-start-line="19" selection-start-column="103" selection-end-line="19" selection-end-column="103" />
+            <state relative-caret-position="546">
+              <caret line="40" column="68" selection-start-line="40" selection-start-column="68" selection-end-line="40" selection-end-column="68" />
+              <folding>
+                <element signature="e#1#24#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/deep-q-learning/SoftPolicyGradient/Sac/Networks/ValueNetwork.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="914">
+              <caret line="71" column="51" selection-start-line="71" selection-start-column="51" selection-end-line="71" selection-end-column="51" />
+              <folding>
+                <element signature="e#3#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/deep-q-learning/DDPG/Networks/policy.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="354">
+              <caret line="32" column="78" selection-start-line="32" selection-start-column="78" selection-end-line="32" selection-end-column="78" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -86,36 +136,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tensorflow/memory/regression_mini_batch.ckpt.index">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tensorflow/memory/regression_mini_batch.ckpt.data-00000-of-00001">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tensorflow/memory/checkpoint">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/q-learning/agent.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/deep-q-learning/DDPG/DDPGAgent.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1215">
-              <caret line="83" column="33" selection-start-line="83" selection-start-column="33" selection-end-line="83" selection-end-column="33" />
+            <state relative-caret-position="324">
+              <caret line="166" column="17" selection-start-line="166" selection-start-column="17" selection-end-line="166" selection-end-column="17" />
               <folding>
-                <element signature="e#0#18#0" expanded="true" />
-                <marker date="1552825538508" expanded="true" signature="71:72" ph="..." />
-                <marker date="1552825538508" expanded="true" signature="71:77" ph="..." />
-                <marker date="1552825538508" expanded="true" signature="821:826" ph="..." />
-                <marker date="1552825538508" expanded="true" signature="1555:1626" ph="..." />
-                <marker date="1552825538508" expanded="true" signature="1648:1690" ph="..." />
-                <marker date="1552825538508" expanded="true" signature="1706:1714" ph="..." />
-                <marker date="1552825538508" expanded="true" signature="1839:1845" ph="..." />
+                <element signature="e#0#41#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/deep-q-learning/DDPG/Networks/critics.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="35" column="66" selection-start-line="35" selection-start-column="66" selection-end-line="35" selection-end-column="66" />
             </state>
           </provider>
         </entry>
@@ -132,11 +169,17 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>-</find>
       <find>observation, reward, done, info =</find>
       <find>observation, reward, done, info = self.env.step(action)</find>
       <find>20</find>
-      <find>observation, reward, done, info =</find>
+      <find>input_shape</find>
+      <find>model_</find>
+      <find>reward</find>
+      <find>-</find>
+      <find>score</find>
+      <find>episode</find>
+      <find>episod</find>
+      <find>episode</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -158,6 +201,34 @@
         <option value="$PROJECT_DIR$/tensorflow/first_session.py" />
         <option value="$PROJECT_DIR$/tensorflow/gradientDescent.py" />
         <option value="$PROJECT_DIR$/tensorflow/nn_set_hyperparameter.py" />
+        <option value="$PROJECT_DIR$/tensorflow/trainning of neural net/nn_set_hyperparameter.py" />
+        <option value="$PROJECT_DIR$/UDPClient/client.py" />
+        <option value="$PROJECT_DIR$/tensorflow/tutorial_1.py" />
+        <option value="$PROJECT_DIR$/tensorflow/tutorial/tutorial_1.py" />
+        <option value="$PROJECT_DIR$/tensorflow/trainning of neural net/progressGradient.py" />
+        <option value="$PROJECT_DIR$/deep-q-learning/Ant-v1.py" />
+        <option value="$PROJECT_DIR$/deep-q-learning/policyGradient.py" />
+        <option value="$PROJECT_DIR$/deep-q-learning/PolicyGradient/policyGradient.py" />
+        <option value="$PROJECT_DIR$/deep-q-learning/SoftPolicyGradient/Sac/Networks.py" />
+        <option value="$PROJECT_DIR$/deep-q-learning/SoftPolicyGradient/Sac/Networks/PolicyGradientNet.py" />
+        <option value="$PROJECT_DIR$/deep-q-learning/SoftPolicyGradient/Sac/Networks/Networks.py" />
+        <option value="$PROJECT_DIR$/deep-q-learning/SoftPolicyGradient/Sac/SACAgent.py" />
+        <option value="$PROJECT_DIR$/deep-q-learning/SoftPolicyGradient/SoftActorCritic.py" />
+        <option value="$PROJECT_DIR$/deep-q-learning/SoftPolicyGradient/Sac/BufferReplay.py" />
+        <option value="$PROJECT_DIR$/deep-q-learning/Deep-Deterministic-Policy-Gradient/Networks/critics.py" />
+        <option value="$PROJECT_DIR$/deep-q-learning/Deep-Deterministic-Policy-Gradient/Networks/policy.py" />
+        <option value="$PROJECT_DIR$/deep-q-learning/Deep-Deterministic-Policy-Gradient/DDPGAgent.py" />
+        <option value="$PROJECT_DIR$/deep-q-learning/DDPG/Networks/UNoise.py" />
+        <option value="$PROJECT_DIR$/deep-q-learning/SoftPolicyGradient/Sac/Networks/PolicyNetwork.py" />
+        <option value="$PROJECT_DIR$/deep-q-learning/DDPG/Networks/save" />
+        <option value="$PROJECT_DIR$/deep-q-learning/DDPG/normalizedAction.py" />
+        <option value="$PROJECT_DIR$/deep-q-learning/SoftPolicyGradient/Sac/Networks/ValueNetwork.py" />
+        <option value="$PROJECT_DIR$/deep-q-learning/DDPG/UNoise.py" />
+        <option value="$PROJECT_DIR$/deep-q-learning/DDPG/Networks/policy.py" />
+        <option value="$PROJECT_DIR$/deep-q-learning/DDPG/Networks/critics.py" />
+        <option value="$PROJECT_DIR$/deep-q-learning/DDPG/DDPGAgent.py" />
+        <option value="$PROJECT_DIR$/deep-q-learning/SoftPolicyGradient/Sac/Networks/SACAgent.py" />
+        <option value="$PROJECT_DIR$/deep-q-learning/SoftPolicyGradient/Sac/Networks/DQN.py" />
       </list>
     </option>
   </component>
@@ -173,6 +244,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -188,18 +260,72 @@
             <path>
               <item name="PROROK" type="b2602c69:ProjectViewProjectNode" />
               <item name="PROROK" type="462c0819:PsiDirectoryNode" />
-              <item name="q-learning" type="462c0819:PsiDirectoryNode" />
+              <item name="deep-q-learning" type="462c0819:PsiDirectoryNode" />
+              <item name="DDPG" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PROROK" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PROROK" type="462c0819:PsiDirectoryNode" />
+              <item name="deep-q-learning" type="462c0819:PsiDirectoryNode" />
+              <item name="DDPG" type="462c0819:PsiDirectoryNode" />
+              <item name="logs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PROROK" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PROROK" type="462c0819:PsiDirectoryNode" />
+              <item name="deep-q-learning" type="462c0819:PsiDirectoryNode" />
+              <item name="DDPG" type="462c0819:PsiDirectoryNode" />
+              <item name="Networks" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PROROK" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PROROK" type="462c0819:PsiDirectoryNode" />
+              <item name="deep-q-learning" type="462c0819:PsiDirectoryNode" />
+              <item name="Deep-Deterministic-Policy-Gradient" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PROROK" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PROROK" type="462c0819:PsiDirectoryNode" />
+              <item name="deep-q-learning" type="462c0819:PsiDirectoryNode" />
+              <item name="Deep-Deterministic-Policy-Gradient" type="462c0819:PsiDirectoryNode" />
+              <item name="Networks" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PROROK" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PROROK" type="462c0819:PsiDirectoryNode" />
+              <item name="deep-q-learning" type="462c0819:PsiDirectoryNode" />
+              <item name="SoftPolicyGradient" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PROROK" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PROROK" type="462c0819:PsiDirectoryNode" />
+              <item name="deep-q-learning" type="462c0819:PsiDirectoryNode" />
+              <item name="SoftPolicyGradient" type="462c0819:PsiDirectoryNode" />
+              <item name="Sac" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PROROK" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PROROK" type="462c0819:PsiDirectoryNode" />
+              <item name="deep-q-learning" type="462c0819:PsiDirectoryNode" />
+              <item name="SoftPolicyGradient" type="462c0819:PsiDirectoryNode" />
+              <item name="Sac" type="462c0819:PsiDirectoryNode" />
+              <item name="Networks" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PROROK" type="b2602c69:ProjectViewProjectNode" />
               <item name="PROROK" type="462c0819:PsiDirectoryNode" />
               <item name="tensorflow" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="PROROK" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PROROK" type="462c0819:PsiDirectoryNode" />
+              <item name="tensorflow" type="462c0819:PsiDirectoryNode" />
+              <item name="trainning of neural net" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -207,9 +333,15 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/deep-q-learning/Deep-Deterministic-Policy-Gradient" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/q-learning" />
-      <recent name="$PROJECT_DIR$/q-learning/q-learning" />
+      <recent name="$PROJECT_DIR$/deep-q-learning/DDPG" />
+      <recent name="$PROJECT_DIR$/deep-q-learning/DDPG/Networks" />
+      <recent name="$PROJECT_DIR$/deep-q-learning/SoftPolicyGradient/Sac/Networks" />
+      <recent name="$PROJECT_DIR$/deep-q-learning/PolicyGradient" />
+      <recent name="$PROJECT_DIR$/tensorflow/tutorial" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -224,7 +356,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.gradientDescent">
+  <component name="RunManager" selected="Python.SACAgent">
     <configuration name="PROROK" type="JupiterNotebook" factoryName="Jupyter Notebook">
       <module name="PROROK" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -244,7 +376,7 @@
         <option name="RunConfigurationTask" enabled="true" run_configuration_name="q-learning" run_configuration_type="PythonConfigurationType" />
       </method>
     </configuration>
-    <configuration name="cart-pole" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="DDPGAgent" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PROROK" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -252,11 +384,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/deep-q-learning" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/deep-q-learning/DDPG" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/deep-q-learning/cart-pole.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/deep-q-learning/DDPG/DDPGAgent.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -265,7 +397,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="first_session" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="DQN" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PROROK" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -273,11 +405,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tensorflow" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/deep-q-learning/SoftPolicyGradient/Sac/Networks" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tensorflow/first_session.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/deep-q-learning/SoftPolicyGradient/Sac/Networks/DQN.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -286,7 +418,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="gradientDescent" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="PolicyNetwork" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PROROK" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -294,11 +426,53 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tensorflow" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/deep-q-learning/SoftPolicyGradient/Sac/Networks" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tensorflow/gradientDescent.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/deep-q-learning/SoftPolicyGradient/Sac/Networks/PolicyNetwork.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="SACAgent" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PROROK" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/deep-q-learning/SoftPolicyGradient/Sac" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/deep-q-learning/SoftPolicyGradient/Sac/Networks/SACAgent.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="SoftActorCritic" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PROROK" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/deep-q-learning/SoftPolicyGradient" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/deep-q-learning/SoftPolicyGradient/SoftActorCritic.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -331,15 +505,19 @@
     <list>
       <item itemvalue="Jupyter Notebook.PROROK" />
       <item itemvalue="Python.q-learning" />
-      <item itemvalue="Python.cart-pole" />
-      <item itemvalue="Python.first_session" />
-      <item itemvalue="Python.gradientDescent" />
+      <item itemvalue="Python.SACAgent" />
+      <item itemvalue="Python.DQN" />
+      <item itemvalue="Python.PolicyNetwork" />
+      <item itemvalue="Python.SoftActorCritic" />
+      <item itemvalue="Python.DDPGAgent" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.gradientDescent" />
-        <item itemvalue="Python.first_session" />
-        <item itemvalue="Python.cart-pole" />
+        <item itemvalue="Python.SACAgent" />
+        <item itemvalue="Python.DDPGAgent" />
+        <item itemvalue="Python.PolicyNetwork" />
+        <item itemvalue="Python.DQN" />
+        <item itemvalue="Python.SoftActorCritic" />
       </list>
     </recent_temporary>
   </component>
@@ -368,20 +546,20 @@
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1625" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16180556" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.33734939" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.36506024" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32902467" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3372503" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.36427733" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32891566" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32902467" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32902467" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -419,7 +597,39 @@
           <line>117</line>
           <option name="timeStamp" value="31" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/deep-q-learning/PolicyGradient/policyGradient.py</url>
+          <line>89</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/deep-q-learning/SoftPolicyGradient/Sac/Networks/ValueNetwork.py</url>
+          <line>71</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/deep-q-learning/SoftPolicyGradient/Sac/Networks/ValueNetwork.py</url>
+          <line>70</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/deep-q-learning/SoftPolicyGradient/Sac/Networks/ValueNetwork.py</url>
+          <line>72</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/deep-q-learning/SoftPolicyGradient/Sac/Networks/ValueNetwork.py</url>
+          <line>73</line>
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
       </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -452,17 +662,21 @@
     <entry file="file://$PROJECT_DIR$/q-learning/q-learning-notes.ipynb">
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
-          <selected id="2" />
+          <selected id="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/deep-q-learning/cart-pole.py">
+    <entry file="file://$PROJECT_DIR$/tensorflow/tutorial/tutorial_1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1125">
-          <caret line="87" selection-start-line="87" selection-end-line="87" />
-          <folding>
-            <element signature="e#318#328#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="780">
+          <caret line="52" selection-start-line="52" selection-end-line="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UDPClient/client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -473,6 +687,37 @@
           <folding>
             <marker date="1552845896958" expanded="true" signature="41:46" ph="..." />
             <marker date="1552845896958" expanded="true" signature="251:363" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deep-q-learning/PolicyGradient/cart-pole.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="30" selection-start-line="30" selection-end-line="31" selection-end-column="11" />
+          <folding>
+            <element signature="e#318#328#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deep-q-learning/PolicyGradient/Ant-v1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="21" column="32" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tensorflow/gradientDescent.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#53#0" expanded="true" />
+            <marker date="1553074852560" expanded="true" signature="157:647" ph="..." />
           </folding>
         </state>
       </provider>
@@ -503,23 +748,175 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tensorflow/gradientDescent.py">
+    <entry file="file://$USER_HOME$/Library/Python/3.6/lib/python/site-packages/gym/envs/classic_control/cartpole.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="72" column="133" selection-start-line="72" selection-start-column="133" selection-end-line="72" selection-end-column="133" />
+        <state relative-caret-position="172">
+          <caret line="91" selection-start-line="91" selection-end-line="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deep-q-learning/SoftPolicyGradient/Sac/Networks/Networks.py" />
+    <entry file="file://$PROJECT_DIR$/tensorflow/trainning of neural net/nn_set_hyperparameter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
           <folding>
-            <element signature="e#0#53#0" expanded="true" />
-            <marker date="1553074852560" expanded="true" signature="157:647" ph="..." />
+            <element signature="e#0#23#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tensorflow/nn_set_hyperparameter.py">
+    <entry file="file://$USER_HOME$/.virtualenvs/PROROK/PROROK/lib/python3.6/site-packages/tensorflow/python/keras/optimizer_v2/optimizer_v2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="103" selection-start-line="19" selection-start-column="103" selection-end-line="19" selection-end-column="103" />
+        <state relative-caret-position="408">
+          <caret line="362" selection-start-line="362" selection-end-line="362" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deep-q-learning/PolicyGradient/policyGradient.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="84" column="29" selection-start-line="84" selection-start-column="29" selection-end-line="84" selection-end-column="29" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tensorflow/trainning of neural net/progressGradient.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deep-q-learning/SoftPolicyGradient/SoftActorCritic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="3" selection-start-column="3" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deep-q-learning/SoftPolicyGradient/Sac/BufferReplay.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deep-q-learning/SoftPolicyGradient/Sac/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/.virtualenvs/PROROK/PROROK/lib/python3.6/site-packages/tensorflow/python/keras/engine/training.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="2782" column="12" selection-start-line="2782" selection-start-column="12" selection-end-line="2782" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deep-q-learning/DDPG/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deep-q-learning/DDPG/Networks/save">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deep-q-learning/DDPG/normalizedAction.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deep-q-learning/DDPG/BufferReplay.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deep-q-learning/DDPG/UNoise.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="104" selection-start-line="6" selection-start-column="104" selection-end-line="6" selection-end-column="104" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deep-q-learning/DDPG/Networks/critics.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="35" column="66" selection-start-line="35" selection-start-column="66" selection-end-line="35" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deep-q-learning/DDPG/Networks/policy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="32" column="78" selection-start-line="32" selection-start-column="78" selection-end-line="32" selection-end-column="78" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deep-q-learning/SoftPolicyGradient/Sac/Networks/ValueNetwork.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="914">
+          <caret line="71" column="51" selection-start-line="71" selection-start-column="51" selection-end-line="71" selection-end-column="51" />
+          <folding>
+            <element signature="e#3#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deep-q-learning/SoftPolicyGradient/Sac/Networks/SACAgent.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="736">
+          <caret line="167" column="23" selection-start-line="167" selection-start-column="23" selection-end-line="167" selection-end-column="23" />
+          <folding>
+            <element signature="e#2#53#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deep-q-learning/SoftPolicyGradient/Sac/Networks/PolicyNetwork.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="509">
+          <caret line="36" column="65" selection-start-line="36" selection-start-column="65" selection-end-line="36" selection-end-column="65" />
+          <folding>
+            <element signature="e#1#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deep-q-learning/SoftPolicyGradient/Sac/Networks/DQN.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="40" column="68" selection-start-line="40" selection-start-column="68" selection-end-line="40" selection-end-column="68" />
+          <folding>
+            <element signature="e#1#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deep-q-learning/DDPG/DDPGAgent.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="166" column="17" selection-start-line="166" selection-start-column="17" selection-end-line="166" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
