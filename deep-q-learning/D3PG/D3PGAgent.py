@@ -33,7 +33,7 @@ class D3PGAgent():
 
     def get_action(self, state):
 
-        actions = self.policy.get_action(state=state) + np.random.normal(0, self.__actor_noise, 1)
+        actions = self.policy.get_action(state=state) + np.random.normal(0, self.__actor_noise, size=self.env.action_space.shape[0])
         actions = tf.clip_by_value(actions, self.env.action_space.low, self.env.action_space.high)
         return actions
 
@@ -94,7 +94,7 @@ class D3PGAgent():
 
             next_actions = self.policy.get_target_action(state=state)
 
-            next_actions = next_actions + np.clip(np.random.normal(0, self.__target_noise, 1), -0.5, 0.5)
+            next_actions = next_actions + np.clip(np.random.normal(0, self.__target_noise, size=self.env.action_space.shape[0]), -0.5, 0.5)
 
             next_actions = np.clip(next_actions, self.env.action_space.low, self.env.action_space.high)
 
@@ -104,7 +104,7 @@ class D3PGAgent():
 
             target_value = tf.math.minimum(target_value, target_value_bis)
 
-            expected_value = reward + done * self.__gamma * tf.cast(target_value, dtype=tf.float64)
+            expected_value = reward + (1 - done) * self.__gamma * tf.cast(target_value, dtype=tf.float64)
 
             critic_loss = self.critic.computeLosses(value=q_value, target=expected_value)
 
@@ -163,7 +163,7 @@ def play():
     current_time = datetime.now().strftime("%Y%m%d-%H")
     train_log_dir = 'logs/gradient_tape/' + "Agent-mean-score-with-baseline" + current_time
     train_summary_writer = tf.summary.create_file_writer(train_log_dir)
-    env = NormalizedActions(gym.make('RoboschoolHalfCheetah-v1'))
+    env = NormalizedActions(gym.make('RoboschoolAnt-v1'))
     scores = []
     agent = D3PGAgent(env=env)
     batch_size = 100
@@ -174,18 +174,21 @@ def play():
     s = env.reset()
     episode_iterations = 0
     ep_score = 0
-    while step < 1e7:
+    ep_len_max = 1000
+    while step < 1e6:
         if done:
             agent.update(batch_size=batch_size, iterations=episode_iterations)
             with train_summary_writer.as_default():
                 agent.computeAndWritePolicyLoss(episode=e)
                 tf.summary.scalar('episode_score', ep_score, step=e)
                 scores.append(ep_score)
+            print("Step {}".format(step))
+            print("episode score {}".format(ep_score))
+            ep_score = 0
             agent.save()
             s = env.reset()
             e += 1
             episode_iterations = 0
-            print("episode score {}".format(ep_score))
         # make the chosen action
         s = s.reshape([1, env.observation_space.shape[0]])
         observation = tf.convert_to_tensor(s, dtype=tf.float64)
@@ -199,6 +202,8 @@ def play():
         s = next_state
         episode_iterations += 1
         step += 1
+        if episode_iterations >= ep_len_max:
+            done = True
 
     return agent
 
@@ -210,7 +215,7 @@ if __name__ == "__main__":
 
     """
     model = play()
-    env = NormalizedActions(gym.make('RoboschoolHalfCheetah-v1'))
+    env = NormalizedActions(gym.make('RoboschoolAnt-v1'))
     env.reset()
     for e in range(100):
         # reset the enviroment

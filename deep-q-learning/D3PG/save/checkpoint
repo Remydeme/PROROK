@@ -1,2 +1,2 @@
-model_checkpoint_path: "Policy_Target_Model20190511-17"
-all_model_checkpoint_paths: "Policy_Target_Model20190511-17"
+model_checkpoint_path: "Policy_Target_Model20190511-23"
+all_model_checkpoint_paths: "Policy_Target_Model20190511-23"
