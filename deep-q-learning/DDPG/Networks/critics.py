@@ -1,43 +1,28 @@
-import tensorflow as tf
 import tensorflow.keras as k
-
-
-
+import tensorflow as tf
 
 class Critics():
-
-    hidden_1_size = 256
-    hidden_2_size = 256
+    hidden_1 = 400
+    hidden_2 = 300
 
     def __init__(self, env, lr=1e-3):
         input_dim = env.observation_space.shape
         action_dim = env.action_space.shape
         self.__lr = lr
-        self.__initializer = k.initializers.he_uniform(seed=7)
-        self.valueNet = self.buildModel(input_dim=input_dim, action_dim=action_dim)
-        self.targetValueNet = self.buildModel(input_dim=input_dim, action_dim=action_dim)
+        self.__initializer = k.initializers.he_uniform(seed=0)
+        self.valueNet = self.buildModel(input_dim=input_dim[0], action_dim=action_dim[0])
+        self.targetValueNet = self.buildModel(input_dim=input_dim[0], action_dim=action_dim[0])
         self.valueNet.set_weights(self.targetValueNet.get_weights())
 
     def buildModel(self, input_dim, action_dim):
 
+        model = k.Sequential()
 
-        state_input = k.Input(shape=input_dim)
+        model.add(k.layers.Dense(self.hidden_1, input_dim=(input_dim + action_dim), activation='relu', name='hidden_1'))
 
-        state_h1 = k.layers.Dense(self.hidden_1_size, activation='elu', kernel_initializer=self.__initializer)(state_input)
+        model.add(k.layers.Dense(self.hidden_2, activation='relu', name='hidden_action'))
 
-        state_h2 = k.layers.Dense(self.hidden_2_size, activation='elu', kernel_initializer=self.__initializer)(state_h1)
-
-        action_input = k.layers.Input(shape=action_dim)
-
-        action_h1 = k.layers.Dense(self.hidden_2_size, activation='elu', kernel_initializer=self.__initializer)(action_input)
-
-        merged = k.layers.Add()([state_h2, action_h1])
-
-        merge_h1 = k.layers.Dense(self.hidden_2_size, activation='elu', kernel_initializer=self.__initializer)(merged)
-
-        output = k.layers.Dense(1)(merge_h1)
-
-        model = k.Model(inputs=[state_input, action_input], outputs=output)
+        model.add(k.layers.Dense(1, activation='linear', name='output_layer'))
 
         optimizer = tf.keras.optimizers.Adam(learning_rate=self.__lr)
 
@@ -47,19 +32,17 @@ class Critics():
 
 
 
-
-
-
     def computeValue(self, state, actions):
-        value = self.valueNet([state, actions])
+        state_and_action = tf.concat([state, actions], axis=1)
+        value = self.valueNet(state_and_action)
         return value
 
     def computeTargetValue(self, state, actions):
-        value = self.targetValueNet([state, actions])
+        state_and_action = tf.concat([state, actions], axis=1)
+        value = self.valueNet(state_and_action)
         return value
 
-
-    def softCopy(self, tau=1e-2):
+    def softCopy(self, tau=0.005):
         target_pars = self.targetValueNet.get_weights()
         value_pars = self.valueNet.get_weights()
         index = 0
@@ -70,4 +53,6 @@ class Critics():
         self.targetValueNet.set_weights(target_pars)
 
     def train(self, state, actions, target):
-        self.valueNet.fit([state, actions], target)
+        state_and_action = tf.concat([state, actions], axis=1)
+        critic_loss = self.valueNet.train_on_batch(state_and_action, target)
+        return critic_loss

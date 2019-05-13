@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9b721acf-9473-4ac9-92c6-5d2000bd3318" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../D3PG/.idea/D3PG.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../D3PG/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../D3PG/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../D3PG/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../D3PG/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../D3PG/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../D3PG/D3PGAgent.py" beforeDir="false" afterPath="$PROJECT_DIR$/../D3PG/D3PGAgent.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../D3PG/Networks/Critics.py" beforeDir="false" afterPath="$PROJECT_DIR$/../D3PG/Networks/Critics.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../D3PG/Networks/Policy.py" beforeDir="false" afterPath="$PROJECT_DIR$/../D3PG/Networks/Policy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../D3PG/logs/gradient_tape/Agent-mean-score-with-baseline20190511-22/events.out.tfevents.1557606052.FalconR.local.32669.5.v2" beforeDir="false" afterPath="$PROJECT_DIR$/../D3PG/logs/gradient_tape/Agent-mean-score-with-baseline20190511-22/events.out.tfevents.1557606052.FalconR.local.32669.5.v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../D3PG/save/Critics_Model20190511-23" beforeDir="false" afterPath="$PROJECT_DIR$/../D3PG/save/Critics_Model20190511-23" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../D3PG/save/Critics_Model_Bis20190511-23" beforeDir="false" afterPath="$PROJECT_DIR$/../D3PG/save/Critics_Model_Bis20190511-23" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../D3PG/save/Critics_Target_Model20190511-23" beforeDir="false" afterPath="$PROJECT_DIR$/../D3PG/save/Critics_Target_Model20190511-23" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../D3PG/save/Critics_Target_Model_Bis20190511-23" beforeDir="false" afterPath="$PROJECT_DIR$/../D3PG/save/Critics_Target_Model_Bis20190511-23" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../D3PG/save/Policy_Model20190511-23.data-00000-of-00001" beforeDir="false" afterPath="$PROJECT_DIR$/../D3PG/save/Policy_Model20190511-23.data-00000-of-00001" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../D3PG/save/Policy_Model20190511-23.index" beforeDir="false" afterPath="$PROJECT_DIR$/../D3PG/save/Policy_Model20190511-23.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../D3PG/save/Policy_Target_Model20190511-23.data-00000-of-00001" beforeDir="false" afterPath="$PROJECT_DIR$/../D3PG/save/Policy_Target_Model20190511-23.data-00000-of-00001" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../D3PG/save/Policy_Target_Model20190511-23.index" beforeDir="false" afterPath="$PROJECT_DIR$/../D3PG/save/Policy_Target_Model20190511-23.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../D3PG/save/checkpoint" beforeDir="false" afterPath="$PROJECT_DIR$/../D3PG/save/checkpoint" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BufferReplay.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DDPGAgent.py" beforeDir="false" afterPath="$PROJECT_DIR$/DDPGAgent.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Networks/critics.py" beforeDir="false" afterPath="$PROJECT_DIR$/Networks/critics.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Networks/policy.py" beforeDir="false" afterPath="$PROJECT_DIR$/Networks/policy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OUNoise.py" beforeDir="false" afterPath="$PROJECT_DIR$/OUNoise.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UNoise.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-132542/events.out.tfevents.1556969143.FalconR.local.74104.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-132631/events.out.tfevents.1556969191.FalconR.local.74160.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-132700/events.out.tfevents.1556969220.FalconR.local.74174.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-132807/events.out.tfevents.1556969287.FalconR.local.74188.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-132910/events.out.tfevents.1556969350.FalconR.local.74215.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-133109/events.out.tfevents.1556969469.FalconR.local.74317.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-133234/events.out.tfevents.1556969554.FalconR.local.74342.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-133319/events.out.tfevents.1556969600.FalconR.local.74358.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-133417/events.out.tfevents.1556969657.FalconR.local.74434.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-133912/events.out.tfevents.1556969952.FalconR.local.74487.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-134057/events.out.tfevents.1556970057.FalconR.local.74522.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-134151/events.out.tfevents.1556970111.FalconR.local.74545.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-134329/events.out.tfevents.1556970209.FalconR.local.74559.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-134457/events.out.tfevents.1556970297.FalconR.local.74599.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-134629/events.out.tfevents.1556970389.FalconR.local.74619.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-134655/events.out.tfevents.1556970415.FalconR.local.74627.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-135536/events.out.tfevents.1556970936.FalconR.local.74801.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-140015/events.out.tfevents.1556971215.FalconR.local.74869.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-140107/events.out.tfevents.1556971267.FalconR.local.74879.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-140541/events.out.tfevents.1556971542.FalconR.local.74936.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-140632/events.out.tfevents.1556971592.FalconR.local.74949.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-140726/events.out.tfevents.1556971646.FalconR.local.74960.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-140836/events.out.tfevents.1556971716.FalconR.local.74975.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-140847/events.out.tfevents.1556971727.FalconR.local.74981.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-141152/events.out.tfevents.1556971912.FalconR.local.75011.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-141258/events.out.tfevents.1556971978.FalconR.local.75015.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-141435/events.out.tfevents.1556972075.FalconR.local.75037.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-141506/events.out.tfevents.1556972106.FalconR.local.75048.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-142333/events.out.tfevents.1556972613.FalconR.local.75097.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-142420/events.out.tfevents.1556972660.FalconR.local.75105.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-142438/events.out.tfevents.1556972678.FalconR.local.75113.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-142604/events.out.tfevents.1556972764.FalconR.local.75131.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-142721/events.out.tfevents.1556972841.FalconR.local.75149.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-142750/events.out.tfevents.1556972870.FalconR.local.75157.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-142914/events.out.tfevents.1556972954.FalconR.local.75171.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-143051/events.out.tfevents.1556973051.FalconR.local.75211.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-144148/events.out.tfevents.1556973708.FalconR.local.75343.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-144227/events.out.tfevents.1556973747.FalconR.local.75364.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-144425/events.out.tfevents.1556973865.FalconR.local.75376.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-144635/events.out.tfevents.1556973995.FalconR.local.75386.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-144754/events.out.tfevents.1556974074.FalconR.local.75400.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-145308/events.out.tfevents.1556974388.FalconR.local.75466.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-150214/events.out.tfevents.1556974934.FalconR.local.75656.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-150410/events.out.tfevents.1556975051.FalconR.local.75664.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-150508/events.out.tfevents.1556975108.FalconR.local.75687.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-150728/events.out.tfevents.1556975248.FalconR.local.75701.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-150800/events.out.tfevents.1556975280.FalconR.local.75709.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-151029/events.out.tfevents.1556975429.FalconR.local.75742.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-151245/events.out.tfevents.1556975565.FalconR.local.75771.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-151429/events.out.tfevents.1556975669.FalconR.local.75837.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-152223/events.out.tfevents.1556976143.FalconR.local.75971.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-153047/events.out.tfevents.1556976647.FalconR.local.76268.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-153132/events.out.tfevents.1556976692.FalconR.local.76277.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-153319/events.out.tfevents.1556976799.FalconR.local.76294.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-153336/events.out.tfevents.1556976816.FalconR.local.76304.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-153409/events.out.tfevents.1556976849.FalconR.local.76322.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-153503/events.out.tfevents.1556976903.FalconR.local.76392.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-153548/events.out.tfevents.1556976949.FalconR.local.76410.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-153729/events.out.tfevents.1556977049.FalconR.local.76498.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-154931/events.out.tfevents.1556977771.FalconR.local.76679.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-154956/events.out.tfevents.1556977796.FalconR.local.76691.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-155030/events.out.tfevents.1556977830.FalconR.local.76703.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-155102/events.out.tfevents.1556977862.FalconR.local.76713.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-155205/events.out.tfevents.1556977925.FalconR.local.76722.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-155403/events.out.tfevents.1556978043.FalconR.local.76752.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-155840/events.out.tfevents.1556978320.FalconR.local.76805.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-160133/events.out.tfevents.1556978493.FalconR.local.76829.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-160415/events.out.tfevents.1556978655.FalconR.local.76878.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-161401/events.out.tfevents.1556979241.FalconR.local.76967.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-161442/events.out.tfevents.1556979282.FalconR.local.76976.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-161547/events.out.tfevents.1556979347.FalconR.local.76999.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-161901/events.out.tfevents.1556979541.FalconR.local.77041.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-162057/events.out.tfevents.1556979657.FalconR.local.77061.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-162815/events.out.tfevents.1556980095.FalconR.local.77116.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-164526/events.out.tfevents.1556981126.FalconR.local.77428.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190504-170823/events.out.tfevents.1556982503.FalconR.local.77816.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-004426/events.out.tfevents.1557009866.FalconR.local.82851.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-014826/events.out.tfevents.1557013706.FalconR.local.83892.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-014912/events.out.tfevents.1557013752.FalconR.local.83902.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-015055/events.out.tfevents.1557013855.FalconR.local.83920.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-020123/events.out.tfevents.1557014483.FalconR.local.84064.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-020228/events.out.tfevents.1557014548.FalconR.local.84086.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-020331/events.out.tfevents.1557014611.FalconR.local.84124.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-021209/events.out.tfevents.1557015129.FalconR.local.84288.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-021259/events.out.tfevents.1557015179.FalconR.local.84301.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-021514/events.out.tfevents.1557015314.FalconR.local.84310.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-021645/events.out.tfevents.1557015405.FalconR.local.84335.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-021824/events.out.tfevents.1557015504.FalconR.local.84347.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-022311/events.out.tfevents.1557015791.FalconR.local.84390.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-022450/events.out.tfevents.1557015890.FalconR.local.84410.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-025002/events.out.tfevents.1557017402.FalconR.local.84676.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-030840/events.out.tfevents.1557018521.FalconR.local.84878.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-031059/events.out.tfevents.1557018659.FalconR.local.84887.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-031222/events.out.tfevents.1557018742.FalconR.local.84909.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-031919/events.out.tfevents.1557019159.FalconR.local.85034.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-103912/events.out.tfevents.1557045552.FalconR.local.85413.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-105146/events.out.tfevents.1557046306.FalconR.local.85675.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-110216/events.out.tfevents.1557046936.FalconR.local.85889.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-111440/events.out.tfevents.1557047680.FalconR.local.86268.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-111903/events.out.tfevents.1557047944.FalconR.local.86387.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-112012/events.out.tfevents.1557048012.FalconR.local.86475.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-112052/events.out.tfevents.1557048052.FalconR.local.86491.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-112133/events.out.tfevents.1557048093.FalconR.local.86499.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-112148/events.out.tfevents.1557048108.FalconR.local.86506.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-112158/events.out.tfevents.1557048118.FalconR.local.86513.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-112259/events.out.tfevents.1557048179.FalconR.local.86548.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-112514/events.out.tfevents.1557048314.FalconR.local.86654.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-112545/events.out.tfevents.1557048345.FalconR.local.86680.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-113407/events.out.tfevents.1557048847.FalconR.local.86784.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-120021/events.out.tfevents.1557050421.FalconR.local.87469.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-120053/events.out.tfevents.1557050453.FalconR.local.87478.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-120357/events.out.tfevents.1557050637.FalconR.local.87603.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-120900/events.out.tfevents.1557050940.FalconR.local.87740.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-121125/events.out.tfevents.1557051085.FalconR.local.87761.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-121343/events.out.tfevents.1557051223.FalconR.local.87825.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-121507/events.out.tfevents.1557051307.FalconR.local.87849.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-122027/events.out.tfevents.1557051627.FalconR.local.87953.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-122151/events.out.tfevents.1557051711.FalconR.local.88001.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-125107/events.out.tfevents.1557053467.FalconR.local.88493.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-125349/events.out.tfevents.1557053629.FalconR.local.88558.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-125535/events.out.tfevents.1557053735.FalconR.local.88630.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-125715/events.out.tfevents.1557053835.FalconR.local.88669.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-125919/events.out.tfevents.1557053959.FalconR.local.88704.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-130756/events.out.tfevents.1557054476.FalconR.local.88951.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-131623/events.out.tfevents.1557054983.FalconR.local.89140.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-132215/events.out.tfevents.1557055335.FalconR.local.89214.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-133033/events.out.tfevents.1557055833.FalconR.local.89457.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-133304/events.out.tfevents.1557055984.FalconR.local.89482.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-133412/events.out.tfevents.1557056052.FalconR.local.89537.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-133444/events.out.tfevents.1557056084.FalconR.local.89562.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-133732/events.out.tfevents.1557056252.FalconR.local.89596.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-133933/events.out.tfevents.1557056373.FalconR.local.89641.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-134128/events.out.tfevents.1557056488.FalconR.local.89674.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-134430/events.out.tfevents.1557056670.FalconR.local.89770.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-134720/events.out.tfevents.1557056840.FalconR.local.89815.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-134803/events.out.tfevents.1557056883.FalconR.local.89825.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-135103/events.out.tfevents.1557057063.FalconR.local.89852.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-135844/events.out.tfevents.1557057525.FalconR.local.89996.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-140754/events.out.tfevents.1557058074.FalconR.local.90228.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-144817/events.out.tfevents.1557060497.FalconR.local.90627.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-144933/events.out.tfevents.1557060573.FalconR.local.90651.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-154135/events.out.tfevents.1557063695.FalconR.local.91075.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-154159/events.out.tfevents.1557063719.FalconR.local.91085.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-154625/events.out.tfevents.1557063985.FalconR.local.91111.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-154750/events.out.tfevents.1557064070.FalconR.local.91151.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-155012/events.out.tfevents.1557064212.FalconR.local.91184.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-155110/events.out.tfevents.1557064270.FalconR.local.91194.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-155215/events.out.tfevents.1557064335.FalconR.local.91207.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-155455/events.out.tfevents.1557064495.FalconR.local.91245.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-155945/events.out.tfevents.1557064785.FalconR.local.91300.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-160504/events.out.tfevents.1557065104.FalconR.local.91326.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-160524/events.out.tfevents.1557065124.FalconR.local.91337.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-160642/events.out.tfevents.1557065202.FalconR.local.91348.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-160832/events.out.tfevents.1557065312.FalconR.local.91371.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-161237/events.out.tfevents.1557065557.FalconR.local.91419.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-161614/events.out.tfevents.1557065774.FalconR.local.91458.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-164536/events.out.tfevents.1557067536.FalconR.local.91579.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-164558/events.out.tfevents.1557067558.FalconR.local.91587.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-164610/events.out.tfevents.1557067570.FalconR.local.91599.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-164802/events.out.tfevents.1557067682.FalconR.local.91617.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-165019/events.out.tfevents.1557067819.FalconR.local.91640.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-165248/events.out.tfevents.1557067968.FalconR.local.91660.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-170725/events.out.tfevents.1557068845.FalconR.local.91709.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-183727/events.out.tfevents.1557074248.FalconR.local.92098.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-184938/events.out.tfevents.1557074978.FalconR.local.92155.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-185009/events.out.tfevents.1557075009.FalconR.local.92171.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-192251/events.out.tfevents.1557076971.FalconR.local.92288.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-192302/events.out.tfevents.1557076982.FalconR.local.92300.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-200249/events.out.tfevents.1557079369.FalconR.local.92475.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-201312/events.out.tfevents.1557079992.FalconR.local.92533.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-201530/events.out.tfevents.1557080130.FalconR.local.92567.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-201607/events.out.tfevents.1557080167.FalconR.local.92582.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-204408/events.out.tfevents.1557081849.FalconR.local.92720.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-204655/events.out.tfevents.1557082015.FalconR.local.92754.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-204715/events.out.tfevents.1557082035.FalconR.local.92763.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-204736/events.out.tfevents.1557082056.FalconR.local.92772.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-204838/events.out.tfevents.1557082118.FalconR.local.92794.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-205041/events.out.tfevents.1557082241.FalconR.local.92827.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-210849/events.out.tfevents.1557083329.FalconR.local.92930.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-211203/events.out.tfevents.1557083523.FalconR.local.92956.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-211248/events.out.tfevents.1557083568.FalconR.local.92971.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-211336/events.out.tfevents.1557083616.FalconR.local.92990.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-212214/events.out.tfevents.1557084134.FalconR.local.93036.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-212418/events.out.tfevents.1557084258.FalconR.local.93052.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-213536/events.out.tfevents.1557084936.FalconR.local.93162.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-213549/events.out.tfevents.1557084949.FalconR.local.93169.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-213604/events.out.tfevents.1557084964.FalconR.local.93178.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-213802/events.out.tfevents.1557085082.FalconR.local.93191.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-213858/events.out.tfevents.1557085138.FalconR.local.93205.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-214158/events.out.tfevents.1557085318.FalconR.local.93232.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-214401/events.out.tfevents.1557085441.FalconR.local.93241.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-221205/events.out.tfevents.1557087125.FalconR.local.93408.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-221218/events.out.tfevents.1557087138.FalconR.local.93426.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-221246/events.out.tfevents.1557087166.FalconR.local.93437.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-221315/events.out.tfevents.1557087195.FalconR.local.93446.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-221354/events.out.tfevents.1557087234.FalconR.local.93462.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-221519/events.out.tfevents.1557087319.FalconR.local.93477.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-221744/events.out.tfevents.1557087464.FalconR.local.93494.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-233315/events.out.tfevents.1557091995.FalconR.local.93816.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-233357/events.out.tfevents.1557092037.FalconR.local.93824.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-233536/events.out.tfevents.1557092136.FalconR.local.93848.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-234350/events.out.tfevents.1557092630.FalconR.local.93908.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-234605/events.out.tfevents.1557092765.FalconR.local.93920.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-234853/events.out.tfevents.1557092933.FalconR.local.93958.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190505-234933/events.out.tfevents.1557092973.FalconR.local.93966.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190506-001356/events.out.tfevents.1557094436.FalconR.local.94168.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190506-003224/events.out.tfevents.1557095544.FalconR.local.94305.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190506-012705/events.out.tfevents.1557098825.FalconR.local.94467.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190506-013152/events.out.tfevents.1557099112.FalconR.local.94500.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190506-015325/events.out.tfevents.1557100405.FalconR.local.94593.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190506-015722/events.out.tfevents.1557100642.FalconR.local.94611.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/gradient_tape/Agent-mean-score-with-baseline20190506-015946/events.out.tfevents.1557100786.FalconR.local.94636.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/normalizedAction.py" beforeDir="false" afterPath="$PROJECT_DIR$/normalizedAction.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/Networks/DQN.py" beforeDir="false" afterPath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/Networks/DQN.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/Networks/PolicyNetwork.py" beforeDir="false" afterPath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/Networks/PolicyNetwork.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/Networks/SACAgent.py" beforeDir="false" afterPath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/Networks/SACAgent.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/Networks/ValueNetwork.py" beforeDir="false" afterPath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/Networks/ValueNetwork.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190501-223554/events.out.tfevents.1556742954.FalconR.local.44377.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190501-223701/events.out.tfevents.1556743021.FalconR.local.44393.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190501-223748/events.out.tfevents.1556743068.FalconR.local.44402.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190501-223900/events.out.tfevents.1556743140.FalconR.local.44418.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190501-224106/events.out.tfevents.1556743266.FalconR.local.44437.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190501-224303/events.out.tfevents.1556743384.FalconR.local.44452.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190501-224346/events.out.tfevents.1556743426.FalconR.local.44467.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190501-224445/events.out.tfevents.1556743485.FalconR.local.44482.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190501-225047/events.out.tfevents.1556743847.FalconR.local.44521.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190501-225303/events.out.tfevents.1556743983.FalconR.local.44566.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190501-225722/events.out.tfevents.1556744242.FalconR.local.44686.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190501-225933/events.out.tfevents.1556744373.FalconR.local.44710.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190501-230022/events.out.tfevents.1556744422.FalconR.local.44723.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190501-230103/events.out.tfevents.1556744463.FalconR.local.44732.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190501-230129/events.out.tfevents.1556744489.FalconR.local.44743.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190501-231000/events.out.tfevents.1556745000.FalconR.local.44900.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190501-231415/events.out.tfevents.1556745255.FalconR.local.44936.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190502-144339/events.out.tfevents.1556801019.FalconR.local.51403.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190502-144430/events.out.tfevents.1556801070.FalconR.local.51418.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190502-145003/events.out.tfevents.1556801403.FalconR.local.51482.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190502-145341/events.out.tfevents.1556801622.FalconR.local.51552.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190502-145435/events.out.tfevents.1556801675.FalconR.local.51562.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190502-152902/events.out.tfevents.1556803742.FalconR.local.52735.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190502-153245/events.out.tfevents.1556803965.FalconR.local.52771.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190502-153535/events.out.tfevents.1556804136.FalconR.local.52796.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190502-153619/events.out.tfevents.1556804179.FalconR.local.52807.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190502-153733/events.out.tfevents.1556804253.FalconR.local.52830.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190502-154505/events.out.tfevents.1556804705.FalconR.local.52883.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190502-154646/events.out.tfevents.1556804806.FalconR.local.52900.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190502-154846/events.out.tfevents.1556804926.FalconR.local.52925.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190502-155014/events.out.tfevents.1556805014.FalconR.local.52942.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190502-155123/events.out.tfevents.1556805083.FalconR.local.52977.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190502-155204/events.out.tfevents.1556805124.FalconR.local.52988.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190502-155641/events.out.tfevents.1556805401.FalconR.local.53026.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190502-155646/events.out.tfevents.1556805406.FalconR.local.53034.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190502-155836/events.out.tfevents.1556805516.FalconR.local.53053.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190502-160610/events.out.tfevents.1556805970.FalconR.local.53176.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190502-160628/events.out.tfevents.1556805988.FalconR.local.53184.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190502-160705/events.out.tfevents.1556806025.FalconR.local.53199.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190502-160815/events.out.tfevents.1556806095.FalconR.local.53214.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190502-160957/events.out.tfevents.1556806197.FalconR.local.53246.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190502-161135/events.out.tfevents.1556806295.FalconR.local.53264.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190502-161837/events.out.tfevents.1556806717.FalconR.local.53301.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190502-162626/events.out.tfevents.1556807186.FalconR.local.53440.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190502-162751/events.out.tfevents.1556807271.FalconR.local.53456.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190502-162801/events.out.tfevents.1556807281.FalconR.local.53463.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190502-162821/events.out.tfevents.1556807301.FalconR.local.53474.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190502-162912/events.out.tfevents.1556807352.FalconR.local.53489.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190502-162927/events.out.tfevents.1556807367.FalconR.local.53496.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190502-163110/events.out.tfevents.1556807470.FalconR.local.53519.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190502-163156/events.out.tfevents.1556807516.FalconR.local.53531.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190502-163318/events.out.tfevents.1556807598.FalconR.local.53548.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190502-163500/events.out.tfevents.1556807700.FalconR.local.53564.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190502-164543/events.out.tfevents.1556808343.FalconR.local.53735.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190502-164849/events.out.tfevents.1556808529.FalconR.local.53761.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190502-164947/events.out.tfevents.1556808587.FalconR.local.53774.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190502-170602/events.out.tfevents.1556809562.FalconR.local.53942.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190502-170619/events.out.tfevents.1556809579.FalconR.local.53950.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190502-170647/events.out.tfevents.1556809607.FalconR.local.53968.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190502-170946/events.out.tfevents.1556809786.FalconR.local.54005.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190502-171042/events.out.tfevents.1556809842.FalconR.local.54023.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190502-171215/events.out.tfevents.1556809935.FalconR.local.54045.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190502-171301/events.out.tfevents.1556809981.FalconR.local.54056.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190502-172128/events.out.tfevents.1556810488.FalconR.local.54151.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190502-172157/events.out.tfevents.1556810517.FalconR.local.54161.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190502-172209/events.out.tfevents.1556810529.FalconR.local.54169.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190502-172336/events.out.tfevents.1556810616.FalconR.local.54182.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190502-172436/events.out.tfevents.1556810676.FalconR.local.54197.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190502-172517/events.out.tfevents.1556810717.FalconR.local.54210.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190502-172603/events.out.tfevents.1556810763.FalconR.local.54236.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190502-172707/events.out.tfevents.1556810827.FalconR.local.54250.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190502-173449/events.out.tfevents.1556811289.FalconR.local.54605.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190502-173522/events.out.tfevents.1556811322.FalconR.local.54623.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190502-173601/events.out.tfevents.1556811361.FalconR.local.54638.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190502-174208/events.out.tfevents.1556811728.FalconR.local.54671.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190502-174227/events.out.tfevents.1556811747.FalconR.local.54682.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190502-174510/events.out.tfevents.1556811911.FalconR.local.54718.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190502-174633/events.out.tfevents.1556811993.FalconR.local.54730.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190502-174800/events.out.tfevents.1556812080.FalconR.local.54745.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190502-174933/events.out.tfevents.1556812173.FalconR.local.54755.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190502-180218/events.out.tfevents.1556812938.FalconR.local.54832.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190502-181432/events.out.tfevents.1556813673.FalconR.local.54889.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190502-183107/events.out.tfevents.1556814667.FalconR.local.54947.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190502-225502/events.out.tfevents.1556830502.FalconR.local.55228.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-000236/events.out.tfevents.1556834556.FalconR.local.55859.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-000307/events.out.tfevents.1556834587.FalconR.local.55868.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-000414/events.out.tfevents.1556834654.FalconR.local.55878.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-000455/events.out.tfevents.1556834695.FalconR.local.55902.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-000517/events.out.tfevents.1556834717.FalconR.local.55922.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-000616/events.out.tfevents.1556834776.FalconR.local.55949.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-000656/events.out.tfevents.1556834816.FalconR.local.55958.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-000701/events.out.tfevents.1556834821.FalconR.local.55963.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-000951/events.out.tfevents.1556834991.FalconR.local.56006.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-001301/events.out.tfevents.1556835181.FalconR.local.56034.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-001811/events.out.tfevents.1556835491.FalconR.local.56067.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-001913/events.out.tfevents.1556835553.FalconR.local.56077.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-002132/events.out.tfevents.1556835692.FalconR.local.56091.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-002229/events.out.tfevents.1556835749.FalconR.local.56134.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-002239/events.out.tfevents.1556835759.FalconR.local.56142.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-002334/events.out.tfevents.1556835814.FalconR.local.56176.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-002426/events.out.tfevents.1556835866.FalconR.local.56183.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-002440/events.out.tfevents.1556835880.FalconR.local.56195.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-002451/events.out.tfevents.1556835891.FalconR.local.56204.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-002626/events.out.tfevents.1556835986.FalconR.local.56252.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-002644/events.out.tfevents.1556836004.FalconR.local.56263.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-002711/events.out.tfevents.1556836031.FalconR.local.56272.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-002851/events.out.tfevents.1556836131.FalconR.local.56288.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-002859/events.out.tfevents.1556836140.FalconR.local.56296.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-002953/events.out.tfevents.1556836194.FalconR.local.56304.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-003046/events.out.tfevents.1556836246.FalconR.local.56313.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-003612/events.out.tfevents.1556836572.FalconR.local.56406.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-004657/events.out.tfevents.1556837217.FalconR.local.56557.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-005135/events.out.tfevents.1556837495.FalconR.local.56597.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-005151/events.out.tfevents.1556837511.FalconR.local.56607.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-005217/events.out.tfevents.1556837538.FalconR.local.56623.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-005253/events.out.tfevents.1556837573.FalconR.local.56640.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-005316/events.out.tfevents.1556837596.FalconR.local.56650.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-005407/events.out.tfevents.1556837647.FalconR.local.56660.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-005636/events.out.tfevents.1556837796.FalconR.local.56683.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-005754/events.out.tfevents.1556837874.FalconR.local.56709.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-010439/events.out.tfevents.1556838279.FalconR.local.56764.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-183444/events.out.tfevents.1556901284.FalconR.local.63399.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-183727/events.out.tfevents.1556901447.FalconR.local.63418.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-183825/events.out.tfevents.1556901505.FalconR.local.63458.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-185238/events.out.tfevents.1556902358.FalconR.local.63833.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-185304/events.out.tfevents.1556902384.FalconR.local.63843.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-185810/events.out.tfevents.1556902690.FalconR.local.63952.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-185819/events.out.tfevents.1556902699.FalconR.local.63960.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-185905/events.out.tfevents.1556902745.FalconR.local.63968.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-190000/events.out.tfevents.1556902800.FalconR.local.63979.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-190040/events.out.tfevents.1556902840.FalconR.local.64019.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-190131/events.out.tfevents.1556902892.FalconR.local.64047.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-190241/events.out.tfevents.1556902961.FalconR.local.64058.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-190307/events.out.tfevents.1556902987.FalconR.local.64066.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-191208/events.out.tfevents.1556903528.FalconR.local.64265.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-191639/events.out.tfevents.1556903799.FalconR.local.64318.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-191657/events.out.tfevents.1556903817.FalconR.local.64328.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-191745/events.out.tfevents.1556903866.FalconR.local.64336.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-191811/events.out.tfevents.1556903891.FalconR.local.64346.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-191912/events.out.tfevents.1556903952.FalconR.local.64366.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-191929/events.out.tfevents.1556903969.FalconR.local.64374.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-191951/events.out.tfevents.1556903991.FalconR.local.64385.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-192130/events.out.tfevents.1556904090.FalconR.local.64428.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-192143/events.out.tfevents.1556904103.FalconR.local.64436.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-192201/events.out.tfevents.1556904121.FalconR.local.64445.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-193545/events.out.tfevents.1556904945.FalconR.local.64662.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-193922/events.out.tfevents.1556905162.FalconR.local.64794.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-194121/events.out.tfevents.1556905281.FalconR.local.64827.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-194200/events.out.tfevents.1556905320.FalconR.local.64839.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-194703/events.out.tfevents.1556905623.FalconR.local.64947.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-194726/events.out.tfevents.1556905646.FalconR.local.64961.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-200122/events.out.tfevents.1556906482.FalconR.local.65209.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-200212/events.out.tfevents.1556906532.FalconR.local.65274.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-200334/events.out.tfevents.1556906614.FalconR.local.65292.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-200442/events.out.tfevents.1556906682.FalconR.local.65320.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-200504/events.out.tfevents.1556906704.FalconR.local.65341.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-200527/events.out.tfevents.1556906727.FalconR.local.65353.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-201225/events.out.tfevents.1556907145.FalconR.local.65423.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-203329/events.out.tfevents.1556908409.FalconR.local.65529.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-203337/events.out.tfevents.1556908417.FalconR.local.65537.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-203400/events.out.tfevents.1556908440.FalconR.local.65549.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-203451/events.out.tfevents.1556908491.FalconR.local.65558.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-204713/events.out.tfevents.1556909233.FalconR.local.65623.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-204912/events.out.tfevents.1556909352.FalconR.local.65627.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-204937/events.out.tfevents.1556909377.FalconR.local.65638.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-205340/events.out.tfevents.1556909620.FalconR.local.65665.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-205559/events.out.tfevents.1556909759.FalconR.local.65676.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190503-213345/events.out.tfevents.1556912025.FalconR.local.66009.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190504-011628/events.out.tfevents.1556925388.FalconR.local.68448.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190504-011653/events.out.tfevents.1556925413.FalconR.local.68456.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190504-012009/events.out.tfevents.1556925609.FalconR.local.68480.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190504-013739/events.out.tfevents.1556926659.FalconR.local.68812.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190504-013849/events.out.tfevents.1556926729.FalconR.local.68834.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190504-014007/events.out.tfevents.1556926807.FalconR.local.68857.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190504-014045/events.out.tfevents.1556926845.FalconR.local.68894.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190504-014113/events.out.tfevents.1556926873.FalconR.local.68925.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190504-014437/events.out.tfevents.1556927077.FalconR.local.68976.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190504-014609/events.out.tfevents.1556927169.FalconR.local.69021.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190504-015112/events.out.tfevents.1556927472.FalconR.local.69080.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190504-015345/events.out.tfevents.1556927625.FalconR.local.69098.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190504-015956/events.out.tfevents.1556927996.FalconR.local.69240.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190504-020039/events.out.tfevents.1556928039.FalconR.local.69246.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190504-020125/events.out.tfevents.1556928085.FalconR.local.69260.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190504-020603/events.out.tfevents.1556928363.FalconR.local.69406.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190504-020732/events.out.tfevents.1556928452.FalconR.local.69432.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190504-020745/events.out.tfevents.1556928465.FalconR.local.69440.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190504-020844/events.out.tfevents.1556928524.FalconR.local.69449.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190504-022343/events.out.tfevents.1556929423.FalconR.local.69553.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190504-022843/events.out.tfevents.1556929723.FalconR.local.69693.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190504-023718/events.out.tfevents.1556930239.FalconR.local.69765.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190504-024953/events.out.tfevents.1556930993.FalconR.local.69905.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190504-025149/events.out.tfevents.1556931109.FalconR.local.69933.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190504-034109/events.out.tfevents.1556934069.FalconR.local.70722.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190504-034154/events.out.tfevents.1556934114.FalconR.local.70732.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190504-034247/events.out.tfevents.1556934167.FalconR.local.70749.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190504-034338/events.out.tfevents.1556934218.FalconR.local.70765.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190504-034425/events.out.tfevents.1556934265.FalconR.local.70775.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190504-034442/events.out.tfevents.1556934283.FalconR.local.70782.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190504-034545/events.out.tfevents.1556934345.FalconR.local.70803.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190504-035326/events.out.tfevents.1556934806.FalconR.local.70891.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190504-035505/events.out.tfevents.1556934905.FalconR.local.70908.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190504-042252/events.out.tfevents.1556936573.FalconR.local.71141.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190504-042436/events.out.tfevents.1556936676.FalconR.local.71156.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190504-042555/events.out.tfevents.1556936755.FalconR.local.71167.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190504-042606/events.out.tfevents.1556936766.FalconR.local.71179.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190504-105139/events.out.tfevents.1556959899.FalconR.local.71393.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190504-105424/events.out.tfevents.1556960064.FalconR.local.71426.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190504-105812/events.out.tfevents.1556960292.FalconR.local.71508.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190504-110841/events.out.tfevents.1556960921.FalconR.local.71623.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190504-111726/events.out.tfevents.1556961446.FalconR.local.71744.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190504-111827/events.out.tfevents.1556961507.FalconR.local.71775.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190504-112304/events.out.tfevents.1556961784.FalconR.local.71830.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190504-112650/events.out.tfevents.1556962010.FalconR.local.71885.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190505-122722/events.out.tfevents.1557052042.FalconR.local.88067.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190505-123452/events.out.tfevents.1557052492.FalconR.local.88211.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190505-124905/events.out.tfevents.1557053345.FalconR.local.88435.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190505-145741/events.out.tfevents.1557061062.FalconR.local.90739.5.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SoftPolicyGradient/Sac/logs/gradient_tape/Agent-mean-score-with-baseline20190506-020114/events.out.tfevents.1557100874.FalconR.local.94656.5.v2" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/DDPGAgent.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/DDPGAgent.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="DDPG" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DDPG" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DDPG" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DDPG" type="462c0819:PsiDirectoryNode" />
+              <item name="Networks" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="DDPGAgent" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="DDPG" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DDPGAgent.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.DDPGAgent" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9b721acf-9473-4ac9-92c6-5d2000bd3318" name="Default Changelist" comment="" />
+      <created>1557737565967</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1557737565967</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Python Console" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32902467" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/DDPGAgent.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
