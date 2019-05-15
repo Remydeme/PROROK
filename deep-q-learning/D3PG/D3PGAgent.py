@@ -14,9 +14,10 @@ import gym
 
 class D3PGAgent():
 
-    def __init__(self, env, gamma=0.99, policy_noise=0.2, actor_noise=0.1):
+    def __init__(self, env, env_name, gamma=0.99, policy_noise=0.2, actor_noise=0.1):
 
         self.env = env
+        self.env_name = env_name
         self.__policy_noise = policy_noise
         self.actor_noise = actor_noise
         self.action_max = self.env.action_space.high[0]
@@ -60,42 +61,29 @@ class D3PGAgent():
 
             next_actions = np.clip(next_actions, -self.action_max, self.action_max)
 
-            with tf.GradientTape(persistent=True) as tape:
 
-                # compute Q(A', S')
-                target_Q1 = self.critic_Q1.computeTargetValue(state=next_state, actions=next_actions)
+            # compute Q(A', S')
+            target_Q1 = self.critic_Q1.computeTargetValue(state=next_state, actions=next_actions)
 
-                target_Q2 = self.critic_Q2.computeTargetValue(state=next_state, actions=next_actions)
+            target_Q2 = self.critic_Q2.computeTargetValue(state=next_state, actions=next_actions)
 
-                target_value = tf.math.minimum(target_Q1, target_Q2)
+            target_value = tf.math.minimum(target_Q1, target_Q2)
 
-                # compute the target
-                expected_value = reward + (1 - done) * self.__gamma * tf.cast(target_value, dtype=tf.float64)
-
-
-                # compute Q(S, A) and QBis(S, A)
-                value_Q1 = self.critic_Q1.computeValue(state=state, actions=actions)
-
-                value_Q2 = self.critic_Q2.computeValue(state=state, actions=actions)
+            # compute the target
+            expected_value = reward + (1 - done) * self.__gamma * tf.cast(target_value, dtype=tf.float64)
 
 
-                critic_loss_Q1 = self.critic_Q1.computeLosses(value=value_Q1, target=expected_value)
+            # compute Q(S, A) and QBis(S, A)
 
-                critic_loss_Q2 = self.critic_Q2.computeLosses(value=value_Q2, target=expected_value)
+            critic_loss_Q1 = self.critic_Q1.train(state=state, actions=actions, target=expected_value)
 
-                critics_loss = critic_loss_Q1 + critic_loss_Q2
+            critic_loss_Q2 = self.critic_Q2.train(state=state, actions=actions, target=expected_value)
 
-                self.critic_losses.append(critics_loss)
+            critics_loss = critic_loss_Q1 + critic_loss_Q2
 
-            grad_Q1 = tape.gradient(critic_loss_Q1, self.critic_Q1.valueNet.trainable_variables)
+            self.critic_losses.append(critics_loss)
 
-            grad_Q2 = tape.gradient(critic_loss_Q2, self.critic_Q2.valueNet.trainable_variables)
 
-            self.critic_Q1.optimizer.apply_gradients(zip(grad_Q1, self.critic_Q1.valueNet.trainable_variables))
-
-            self.critic_Q2.optimizer.apply_gradients(zip(grad_Q2, self.critic_Q2.valueNet.trainable_variables))
-
-            del tape
 
             if iterations % 2 == 0:
 
@@ -124,16 +112,16 @@ class D3PGAgent():
 
     def save(self):
 
-        model_filename = "save/Policy_Model" + datetime.now().strftime("%Y%m%d-%H")
-        target_model_filename = "save/Policy_Target_Model" + datetime.now().strftime("%Y%m%d-%H")
+        model_filename = "save/Policy_Model" + self.env_name + datetime.now().strftime("%Y%m%d-%H")
+        target_model_filename = "save/Policy_Target_Model" + self.env_name + datetime.now().strftime("%Y%m%d-%H")
         self.policy.policyNet.save_weights(model_filename)
         self.policy.policyTargetNet.save_weights(target_model_filename)
         model_filename = "save/Critics_Model" + datetime.now().strftime("%Y%m%d-%H")
-        target_model_filename = "save/Critics_Target_Model" + datetime.now().strftime("%Y%m%d-%H")
+        target_model_filename = "save/Critics_Target_Model" + self.env_name + datetime.now().strftime("%Y%m%d-%H")
         self.critic_Q1.valueNet.save(model_filename)
         self.critic_Q1.targetValueNet.save(target_model_filename)
-        model_filename_bis = "save/Critics_Model_Bis" + datetime.now().strftime("%Y%m%d-%H")
-        target_model_filename_bis = "save/Critics_Target_Model_Bis" + datetime.now().strftime("%Y%m%d-%H")
+        model_filename_bis = "save/Critics_Model_Bis" + self.env_name + datetime.now().strftime("%Y%m%d-%H")
+        target_model_filename_bis = "save/Critics_Target_Model_Bis" + self.env_name + datetime.now().strftime("%Y%m%d-%H")
         self.critic_Q2.valueNet.save(model_filename_bis)
         self.critic_Q2.targetValueNet.save(target_model_filename_bis)
 
@@ -151,7 +139,7 @@ class D3PGAgent():
         self.policy.policyNet.load_weights(actor_name)
 
 
-def evaluateModel(env, agent):
+def evaluateModel(env, agent, episode):
     for e in range(10):
         s = env.reset()
         ep_memory = []
@@ -164,8 +152,7 @@ def evaluateModel(env, agent):
             ep_score += r
         ep_memory.append(ep_score)
     evaluation_score = np.mean(ep_memory)
-    tf.summary.scalar('evaluation score', evaluation_score, step=e)
-
+    tf.summary.scalar('evaluation score', evaluation_score, step=episode)
 
 
 
@@ -185,7 +172,7 @@ def play(env, agent):
     ep_score = 0
     evaluation_delay = 100
     ep_max_len = 1000
-    while step < 120000:
+    while step < 1e6:
         if done:
             agent.update(batch_size=batch_size, iterations=episode_iterations)
             with train_summary_writer.as_default():
@@ -193,7 +180,7 @@ def play(env, agent):
                 tf.summary.scalar('episode score', ep_score, step=e)
                 scores.append(ep_score)
                 if e % evaluation_delay == 0 and e != 0:
-                    evaluateModel(env=env, agent=agent)
+                    evaluateModel(env=env, agent=agent, episode=e)
             print("episode {} | step {}".format(e, step))
             ep_score = 0
             agent.save()
