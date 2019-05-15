@@ -14,7 +14,9 @@ class Critics:
         self.optimizer = k.optimizers.Adam(learning_rate=lr)
         self.valueNet = self.buildModel(input_dim=input_dim, action_dim=action_dim)
         self.targetValueNet = self.buildModel(input_dim=input_dim, action_dim=action_dim)
-        self.valueNet.set_weights(self.targetValueNet.get_weights())
+        self.targetValueNet.set_weights(self.valueNet.get_weights())
+
+
 
     def buildModel(self, input_dim, action_dim):
 
@@ -24,7 +26,7 @@ class Critics:
 
         model.add(k.layers.Dense(self.hidden_2, activation='relu', name='hidden_action'))
 
-        model.add(k.layers.Dense(1, activation='linear', name='output_layer'))
+        model.add(k.layers.Dense(1, name='output_layer'))
 
         return model
 
@@ -38,7 +40,7 @@ class Critics:
         value = self.targetValueNet(state_and_action)
         return value
 
-    def softCopy(self, tau=5e-3):
+    def softCopy(self, tau=0.005):
         target_pars = self.targetValueNet.get_weights()
         value_pars = self.valueNet.get_weights()
         index = 0
