@@ -1,6 +1,6 @@
-from D3PG.Networks.Critics import Critics
-from D3PG.Networks.Policy import Policy
-from D3PG.replayBuffer import ReplayBuffer
+from Networks.Critics import Critics
+from Networks.Policy import Policy
+from replayBuffer import ReplayBuffer
 import roboschool
 import tensorflow as tf
 import numpy as np
@@ -85,7 +85,7 @@ class D3PGAgent():
 
 
 
-            if iterations % 2 == 0:
+            if step % 2 == 0:
 
                 # train the actor
                 with tf.GradientTape() as tape:
@@ -116,7 +116,7 @@ class D3PGAgent():
         target_model_filename = "save/Policy_Target_Model" + self.env_name + datetime.now().strftime("%Y%m%d-%H")
         self.policy.policyNet.save_weights(model_filename)
         self.policy.policyTargetNet.save_weights(target_model_filename)
-        model_filename = "save/Critics_Model" + datetime.now().strftime("%Y%m%d-%H")
+        model_filename = "save/Critics_Model" + self.env_name + datetime.now().strftime("%Y%m%d-%H")
         target_model_filename = "save/Critics_Target_Model" + self.env_name + datetime.now().strftime("%Y%m%d-%H")
         self.critic_Q1.valueNet.save(model_filename)
         self.critic_Q1.targetValueNet.save(target_model_filename)
@@ -135,8 +135,13 @@ class D3PGAgent():
         self.critic_losses.clear()
         self.policy_losses.clear()
 
-    def load_model(self, actor_name):
+    def load_model(self, actor_name, actor_target_name, critic_1_name, critic_2_name, critic_1_target_name, critic_2_target_name):
         self.policy.policyNet.load_weights(actor_name)
+        self.policy.policyTargetNet.load_weights(actor_target_name)
+        self.critic_Q1.valueNet = tf.keras.models.load_model(critic_1_name)
+        self.critic_Q2.valueNet = tf.keras.models.load_model(critic_2_name)
+        self.critic_Q1.targetValueNet = tf.keras.models.load_model(critic_1_target_name)
+        self.critic_Q2.targetValueNet = tf.keras.models.load_model(critic_2_target_name)
 
 
 def evaluateModel(env, agent, episode):
@@ -158,12 +163,12 @@ def evaluateModel(env, agent, episode):
 
 
 def play(env, agent):
-    current_time = datetime.now().strftime("%Y%m%d-%H")
-    train_log_dir = 'logs/gradient_tape/' + "Agent-mean-score-with-baseline" + current_time
+    current_time = datetime.now().strftime("%Y%m%d%H")
+    train_log_dir = 'logs/gradient_tape/' + "Agent" + env_game + current_time
     train_summary_writer = tf.summary.create_file_writer(train_log_dir)
     scores = []
     batch_size = 100
-    training_delay = 1000
+    training_delay = 10000
     step = 0
     e = 0
     done = False
@@ -171,17 +176,17 @@ def play(env, agent):
     episode_iterations = 0
     ep_score = 0
     evaluation_delay = 100
-    ep_max_len = 1000
-    while step < 1e6:
+    while step < 1e7:
         if done:
             agent.update(batch_size=batch_size, iterations=episode_iterations)
             with train_summary_writer.as_default():
                 agent.computeAndWritePolicyLoss(episode=e)
                 tf.summary.scalar('episode score', ep_score, step=e)
+                tf.summary.scalar('step by episode', episode_iterations, step=e)
                 scores.append(ep_score)
                 if e % evaluation_delay == 0 and e != 0:
                     evaluateModel(env=env, agent=agent, episode=e)
-            print("episode {} | step {}".format(e, step))
+            print("episode {} | step {} | score {}".format(e, step, ep_score))
             ep_score = 0
             agent.save()
             s = env.reset()
@@ -198,16 +203,19 @@ def play(env, agent):
         ep_score += r
         agent.replayBuffer.store(obs=s, act=a, rew=r, next_obs=next_state, done=done)
         s = next_state
-        if episode_iterations >= ep_max_len:
-            done = True
         episode_iterations += 1
         step += 1
     return agent
 
 
-def testModel(env):
-    model = D3PGAgent(env=env)
-    model.load_model(actor_name='save/Policy_Model20190513-11')
+def testModel(env, env_name):
+    model = D3PGAgent(env=env, env_name=env_name)
+    model.load_model(actor_name='save/Policy_ModelRoboschoolHalfCheetah-v120190517-10',
+                     actor_target_name='save/Policy_Target_ModelRoboschoolHalfCheetah-v120190517-10',
+                     critic_1_name='save/Critics_ModelRoboschoolHalfCheetah-v120190517-10',
+                     critic_2_name='save/Critics_Model_BisRoboschoolHalfCheetah-v120190517-10',
+                     critic_1_target_name='save/Critics_Target_ModelRoboschoolHalfCheetah-v120190517-10',
+                     critic_2_target_name='save/Critics_Target_Model_BisRoboschoolHalfCheetah-v120190517-10')
     env.reset()
     for e in range(1000):
         # reset the enviroment
@@ -217,13 +225,15 @@ def testModel(env):
             s = s.reshape([1, env.observation_space.shape[0]])
             s = tf.cast(s, dtype=tf.float64)
             a = model.take_action(state=s)
-            s, r, done, _ = env.step(a.numpy())
+            s, r, done, _ = env.step(a)
             env.render()
 
 if __name__ == "__main__":
-    env_game = 'RoboschoolHalfCheetah-v1'
+    env_game = 'RoboschoolAnt-v1'
     env = gym.make(env_game)
-    agent = D3PGAgent(env=env)
+    env.seed(0)
+    agent = D3PGAgent(env=env, env_name=env_game)
+    env.reset()
     model = play(env=env, agent=agent)
     env.reset()
     for e in range(100):
