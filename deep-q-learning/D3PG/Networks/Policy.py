@@ -6,8 +6,9 @@ class Model(k.Model):
     hidden_1_size = 400
     hidden_2_size = 300
 
-    def __init__(self, input_dim, action_dim):
+    def __init__(self, action_dim, action_max):
         super().__init__()
+        self.action_max = action_max
         self.__initializer = k.initializers.he_uniform(seed=0)
         self.h1 = k.layers.Dense(self.hidden_1_size, activation='relu', name='hidden_1')
         self.h2 = k.layers.Dense(self.hidden_2_size, activation='relu', name='hidden_2')
@@ -15,11 +16,10 @@ class Model(k.Model):
 
 
 
-
     def call(self, inputs):
         x = self.h1(inputs)
         x = self.h2(x)
-        x = self.outputs(x)
+        x = (self.action_max * self.outputs(x))
         return x
 
 
@@ -29,30 +29,30 @@ class Policy:
 
 
 
-    def __init__(self, input_dim, action_dim, action_low, action_high, lr=1e-3):
-        self.action_low = action_low
-        self.action_high = action_high
+    def __init__(self, action_dim, action_high, lr=1e-3):
+        self.action_max = action_high[0]
         self.action_dim = action_dim
-        self.policyNet = Model(input_dim=input_dim, action_dim=action_dim)
-        self.policyTargetNet = Model(input_dim=input_dim, action_dim=action_dim)
+        self.policyNet = Model(action_dim=action_dim, action_max=self.action_max)
+        self.policyTargetNet = Model(action_dim=action_dim, action_max=self.action_max)
         self.optimizer = tf.keras.optimizers.Adam(learning_rate=lr)
         self.policyTargetNet.set_weights(self.policyNet.get_weights())
-
 
     def get_action(self, state):
         actions = self.policyNet(state)
         return actions[0]
+
+    def get_target_action(self, state):
+        actions = self.policyTargetNet(state)
+        return actions
 
     def evaluate_state(self, state):
         actions = self.policyNet(state)
         return actions
 
 
-    def get_target_action(self, state):
-        actions = self.policyTargetNet(state)
-        return actions
 
-    def softCopy(self, tau=5e-3):
+
+    def softCopy(self, tau=0.005):
         target_pars = self.policyTargetNet.get_weights()
         value_pars = self.policyNet.get_weights()
         index = 0

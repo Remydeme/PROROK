@@ -1,18 +1,17 @@
 import tensorflow as tf
 import tensorflow.keras as k
-import numpy as np
 
 class Model(k.Model):
 
-    hidden_1_size = 256
-    hidden_2_size = 256
+    hidden_1_size = 400
+    hidden_2_size = 300
 
     def __init__(self, input_dim, action_dim):
         super().__init__()
-        self.__initializer = k.initializers.he_uniform(seed=42)
-        self.h1 = k.layers.Dense(self.hidden_1_size, activation='elu', kernel_initializer=self.__initializer)
-        self.h2 = k.layers.Dense(self.hidden_2_size, activation='elu', kernel_initializer=self.__initializer)
-        self.outputs = k.layers.Dense(action_dim, activation='tanh', kernel_initializer=self.__initializer)
+        self.__initializer = k.initializers.he_uniform(seed=0)
+        self.h1 = k.layers.Dense(self.hidden_1_size, activation='tanh', name='hidden_1')
+        self.h2 = k.layers.Dense(self.hidden_2_size, activation='tanh', name='hidden_2')
+        self.outputs = k.layers.Dense(action_dim, activation='tanh', name='actions_ouput')
 
 
 
@@ -53,7 +52,7 @@ class Policy():
         actions = self.policyTargetNet(state)
         return actions
 
-    def softCopy(self, tau=1e-2):
+    def softCopy(self, tau=0.005):
         target_pars = self.policyTargetNet.get_weights()
         value_pars = self.policyNet.get_weights()
         index = 0
@@ -62,4 +61,3 @@ class Policy():
             target_pars[index] = target_par
             index += 1
         self.policyTargetNet.set_weights(target_pars)
-

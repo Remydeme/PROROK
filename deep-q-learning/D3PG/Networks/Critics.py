@@ -11,10 +11,11 @@ class Critics:
         action_dim = env.action_space.shape
         self.__lr = lr
         self.__initializer = k.initializers.he_uniform(seed=0)
-        self.optimizer = k.optimizers.Adam(learning_rate=lr)
         self.valueNet = self.buildModel(input_dim=input_dim, action_dim=action_dim)
         self.targetValueNet = self.buildModel(input_dim=input_dim, action_dim=action_dim)
-        self.valueNet.set_weights(self.targetValueNet.get_weights())
+        self.targetValueNet.set_weights(self.valueNet.get_weights())
+
+
 
     def buildModel(self, input_dim, action_dim):
 
@@ -24,7 +25,11 @@ class Critics:
 
         model.add(k.layers.Dense(self.hidden_2, activation='relu', name='hidden_action'))
 
-        model.add(k.layers.Dense(1, activation='linear', name='output_layer'))
+        model.add(k.layers.Dense(1, name='output_layer'))
+
+        optimizer = k.optimizers.Adam(learning_rate=1e-3)
+
+        model.compile(optimizer=optimizer, loss='mse')
 
         return model
 
@@ -38,7 +43,7 @@ class Critics:
         value = self.targetValueNet(state_and_action)
         return value
 
-    def softCopy(self, tau=5e-3):
+    def softCopy(self, tau=0.005):
         target_pars = self.targetValueNet.get_weights()
         value_pars = self.valueNet.get_weights()
         index = 0
@@ -48,6 +53,7 @@ class Critics:
             index += 1
         self.targetValueNet.set_weights(target_pars)
 
-    def computeLosses(self, value, target):
-        critic_loss = k.losses.mean_squared_error(target, value)
+    def train(self, state, actions, target):
+        state_and_action = tf.concat([state, actions], axis=1)
+        critic_loss = self.valueNet.train_on_batch(state_and_action, target)
         return critic_loss
